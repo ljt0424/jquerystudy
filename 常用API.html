@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <div>我是div</div>
+    <div class="nav">我是nav的div</div>
+    <p>我是p</p>
+    <ul class="name">
+        <li class="item"></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <script>
+
+        //获取选择器
+        $(function(){
+            console.log($(".nav"))
+            console.log($('ul li')) 
+        })
+
+        //筛选
+        // $('li:first').css('background','pink')
+        // $('li:last').css('background','pink')
+        // $('li:odd').css('background','pink')
+        // $('li:even').css('background','pink') 
+        // // $('li:eq(index)')
+        // $('li:eq(2)').css('background','pink')
+
+        // $('li').parent()
+        // $('ul').children('li')
+        // $('ul').find('li')
+
+        // 1. 兄弟元素siblings 除了自身元素之外的所有亲兄弟
+        $("ul .item").siblings("li").css("color", "red");
+
+        $("ul li").eq(1).css("color", "blue");
+        //增加内容
+        $('.nav').css('background','pink')
+
+
+    </script>
+</body>
+</html>
